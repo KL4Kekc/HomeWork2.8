@@ -22,14 +22,15 @@ public class Main {
                 String[] array = bigDictionary.get(key);
                 bigDictionary.put(key, array);
 
-                for (String str : array) {
+                for (String string : array) {
                     ArrayList<String> arrayList = new ArrayList<String>(array.length);
                     arrayList.addAll(Arrays.asList(array));
                     arrayList.add(key);
-                    arrayList.remove(str);
+                    arrayList.remove(string);
                     String[] array1 = new String[arrayList.size()];
                     array1 = arrayList.toArray(array1);
-                    bigDictionary.put(str, array1);
+                    bigDictionary.put(string, array1);
+                    System.out.println("Слова в Большом словаре" + " - " + string + " - " + Arrays.toString(array1));
                 }
             } catch (Exception ex) {
             }
